@@ -8,6 +8,6 @@ setup(name='ikea Analytics',
       url='https://github.com/rupem/ikea-twitter-analytics',
       packages=['ikea_analytics'],
       install_requires=[
-        requests
+        'requests'
     ],
      )
