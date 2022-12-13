@@ -6,5 +6,5 @@ setup(name='IKEA Analytics',
       author='Rupesh M',
       author_email='rupesh.mokshagundam@gmail.com',
       url='https://github.com/rupem/ikea-twitter-analytics',
-      packages=['requests'],
+      packages=['ikea_analytics'],
      )
