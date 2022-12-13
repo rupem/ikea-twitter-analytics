@@ -15,4 +15,4 @@ query = '#IKEA -is:retweet lang:en'
 tweets = client.search_recent_tweets(query=query, tweet_fields=['id,text,created_at,public_metrics'], max_results=100)
 
 for t in tweets:
-    print(t.)
+    print(t)

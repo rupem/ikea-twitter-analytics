@@ -10,7 +10,7 @@ search_url = "https://api.twitter.com/2/tweets/search/recent"
 
 # Optional params: start_time,end_time,since_id,until_id,max_results,next_token,
 # expansions,tweet.fields,media.fields,poll.fields,place.fields,user.fields
-query_params = {'query': '#IKEA','tweet.fields': 'author_id,id,text,created_at'}
+query_params = {'query': '#IKEA','tweet.fields': 'author_id,id,text,created_at,public_metrics'}
 
 
 def bearer_oauth(r):
