@@ -2,3 +2,4 @@ requests
 tweepy
 pyyaml
 pyspark
+pandas
