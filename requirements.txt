@@ -3,3 +3,4 @@ tweepy
 pyyaml
 pyspark
 pandas
+textblob
