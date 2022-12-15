@@ -12,7 +12,7 @@ old_date = (current_date - timedelta(days=7)).date
 print(old_date)
 
 print(sys.argv)
-loader = load_tweets('#IKEA')
+loader = load_tweets(sys.argv[1])
 
 if loader == 0:
     spark_process()
