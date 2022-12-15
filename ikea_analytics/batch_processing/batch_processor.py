@@ -15,7 +15,7 @@ def spark_process():
     selected_df.repartition("created_date").write.mode("overwrite").partitionBy("created_date").csv("ikea_analytics\\batch_processing\\data\\processed_data\\")
     logging.info("********** partitioned data loaded into ikea_analytics\\batch_processing\\data\\processed_data **************")
     mode = "overwrite"
-    url = "jdbc:postgresql://localhost:5432/ikea_analytics"
-    properties = {"user": "postgres","password": "moksha93","driver": "org.postgresql.Driver"}
+    url = "jdbc:postgresql://localhost:5432/ikea_db"
+    properties = {"user": "postgres","password": "docker","driver": "org.postgresql.Driver"}
     selected_df.write.jdbc(url=url, table="tweets", mode=mode, properties=properties)
     logging.info("********** data loaded into tweets table **************")
