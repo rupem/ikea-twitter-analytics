@@ -1,3 +1,8 @@
+"""
+This is the second step in the pipeline.
+Cleans the data and persists data into table for further analysis.
+"""
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import to_date
 import logging

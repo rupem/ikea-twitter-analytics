@@ -1,4 +1,7 @@
-__package__ = None
+"""
+This module analyses tweets and get descriptive analysis out of it.
+returns top 10 tweets of given hastag with top like and retweet count.
+"""
 
 import pandas as pd
 import logging
