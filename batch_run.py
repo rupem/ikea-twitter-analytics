@@ -2,10 +2,10 @@ import sys
 import os
 from datetime import datetime, date, timedelta
 
-from batch_processing.tweet_loader import load_tweets
-from batch_processing.batch_processor import spark_process
-from batch_processing.tweet_analyzer import analyze_tweets
-from batch_processing.sentiment_extractor import extract_sentiments
+from ikea_analytics.batch_processing.tweet_loader import load_tweets
+from ikea_analytics.batch_processing.batch_processor import spark_process
+from ikea_analytics.batch_processing.tweet_analyzer import analyze_tweets
+from ikea_analytics.batch_processing.sentiment_extractor import extract_sentiments
 
 
 current_date = datetime.today()

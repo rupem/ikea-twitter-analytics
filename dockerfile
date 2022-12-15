@@ -6,8 +6,8 @@ RUN mv postgresql-42.2.5.jar /opt/spark/jars
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 RUN python -m textblob.download_corpora
-COPY ikea_analytics/batch_run.py .
-RUN batch_run.py
+COPY batch_run.py .
+RUN python batch_run.py '#IKEA'
 
 from postgres
 
