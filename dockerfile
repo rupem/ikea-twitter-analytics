@@ -1,3 +1,10 @@
+from postgres
+
+ENV POSTGRES_PASSWORD docker
+ENV POSTGRES_DB ikea_db
+COPY ikea.sql /docker-entrypoint-initdb.d/
+
+
 from gcr.io/datamechanics/spark:platform-3.1-dm14
 
 ENV PYSPARK_MAJOR_PYTHON_VERSION=3
@@ -9,8 +16,3 @@ RUN python -m textblob.download_corpora
 COPY batch_run.py .
 RUN python batch_run.py '#IKEA'
 
-from postgres
-
-ENV POSTGRES_PASSWORD docker
-ENV POSTGRES_DB ikea_db
-COPY ikea.sql /docker-entrypoint-initdb.d/
