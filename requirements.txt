@@ -4,3 +4,5 @@ pyyaml
 pyspark
 pandas
 textblob
+psycopg2
+SQLAlchemy
