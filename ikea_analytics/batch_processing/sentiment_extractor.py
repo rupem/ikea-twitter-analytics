@@ -1,14 +1,14 @@
-def get_tweet_sentiment(self, tweet):
-        '''
-        Utility function to classify sentiment of passed tweet
-        using textblob's sentiment method
-        '''
-        # create TextBlob object of passed tweet text
-        analysis = TextBlob(self.clean_tweet(tweet))
-        # set sentiment
-        if analysis.sentiment.polarity > 0:
-            return 'positive'
-        elif analysis.sentiment.polarity == 0:
-            return 'neutral'
-        else:
-            return 'negative'
+__package__ = None
+
+from .utilities import alchemyEngine,get_tweets,clean_tweet,get_tweet_sentiment
+
+def extract_sentiments():
+    df = get_tweets()
+    df['clean_text'] = df['text'].apply(lambda x : clean_tweet(x))
+    df['sentiment'] = df['text'].apply(lambda x : get_tweet_sentiment(x))
+    print(df[['text','retweet_count','like_count','sentiment']].sort_values(by=['like_count','retweet_count'],ascending=False)[:10])
+
+
+
+
+
